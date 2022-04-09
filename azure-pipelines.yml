@@ -27,7 +27,3 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/DevOpsApp/Dockerfile'
         tags: |
           $(tag)
-          - task: DotNetCoreCLI@2
-            inputs:
-              command: 'build'
-              projects: 'DevOpsApp/DevOpsApp.csproj'
