@@ -1,8 +1,4 @@
 # Docker
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-    projects: '**/*.csproj'
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
@@ -31,3 +27,6 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/DevOpsApp/Dockerfile'
         tags: |
           $(tag)
+          - task: DotNetCoreCLI@2
+            inputs:
+              command: 'build'
