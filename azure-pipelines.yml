@@ -24,6 +24,7 @@ stages:
       displayName: Build an image
       inputs:
         command: build
+         projects: '**/*.csproj'
         dockerfile: '$(Build.SourcesDirectory)/DevOpsApp/Dockerfile'
         tags: |
           $(tag)
