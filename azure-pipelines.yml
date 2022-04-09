@@ -39,5 +39,7 @@ stages:
           containerRegistry: 'Docker-Hub'
           repository: 'devopsapp'
           command: 'push'
+          tags: |
+            $(tag)
 
           
