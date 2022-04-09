@@ -27,3 +27,7 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/DevOpsApp/Dockerfile'
         tags: |
           $(tag)
+          - task: UseDotNet@2
+            inputs:
+              packageType: 'sdk'
+              version: '6.0'
