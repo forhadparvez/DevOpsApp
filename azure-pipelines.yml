@@ -29,5 +29,5 @@ stages:
           $(tag)
           - task: DotNetCoreCLI@2
             inputs:
-                command: 'build'
-                projects: '**/*.csproj'
+              command: 'build'
+              projects: 'DevOpsApp/DevOpsApp.csproj'
