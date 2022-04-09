@@ -24,6 +24,6 @@ stages:
         - task: Docker@2
           inputs:
             containerRegistry: 'Docker-Hub'
-            repository: 'devopsapp'
+            repository: 'forhadparvez/devopsapp'
             command: 'buildAndPush'
             Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
